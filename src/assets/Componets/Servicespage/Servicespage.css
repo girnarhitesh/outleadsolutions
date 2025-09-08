@@ -1,0 +1,48 @@
+.Servicespage-csection-container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+
+}
+
+.Servicespage-csection-container {
+    width: 100%;
+}
+
+.Servicespage-csection-container p {
+    font-size: 20px;
+    width: 60vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1vh;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.Servicespage-img-section {
+    width: 100%;
+    text-align: center;
+    /* margin-top: 3vh; */
+}
+
+.Servicespage-img-section img {
+    width: 60vw;
+
+}
+
+@media(max-width:900px) {
+    .Servicespage-csection-container p {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .Servicespage-img-section img {
+        width: 100%;
+    }
+    .Servicespage-csection-container{
+        margin-top: 10vh;
+    }
+}

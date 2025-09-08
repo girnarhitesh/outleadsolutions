@@ -1,0 +1,420 @@
+.why-choose-us-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+    /* height: 100vh; */
+    position: relative;
+    overflow: hidden;
+    padding: 7rem;
+}
+
+.why-choose-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 25% 25%, rgba(52, 152, 219, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(241, 196, 15, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Styles */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section-header.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.title-underline {
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #f39c12, transparent);
+    margin: 0 auto;
+    border-radius: 2px;
+    animation: expandUnderline 1s ease-out 1.2s forwards;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+}
+
+.features-grid.slide-in-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.8s ease-out;
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #9A7E5D;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-1 {
+    animation: slideInLeft 0.8s ease-out 0.8s both;
+}
+
+.card-2 {
+    animation: slideInUp 0.8s ease-out 1s both;
+}
+
+.card-3 {
+    animation: slideInRight 0.8s ease-out 1.2s both;
+}
+
+/* Icon Containers */
+.icon-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-container {
+    transform: scale(1.1) rotateY(5deg);
+    box-shadow: 0 15px 40px rgba(243, 156, 18, 0.4);
+}
+
+/* Performance Chart Icon */
+.performance-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 30px;
+}
+
+.bar {
+    width: 4px;
+    background: #ffffff;
+    border-radius: 2px;
+    animation: chartGrow 1.5s ease-out infinite alternate;
+}
+
+.bar-1 {
+    height: 10px;
+    animation-delay: 0.1s;
+}
+
+.bar-2 {
+    height: 15px;
+    animation-delay: 0.2s;
+}
+
+.bar-3 {
+    height: 25px;
+    animation-delay: 0.3s;
+}
+
+.bar-4 {
+    height: 30px;
+    animation-delay: 0.4s;
+}
+
+.bar-5 {
+    height: 20px;
+    animation-delay: 0.5s;
+}
+
+/* Price Tag Icon */
+.price-tag {
+    width: 40px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dollar-sign {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f39c12;
+    animation: dollarPulse 2s ease-in-out infinite;
+}
+
+.price-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.line {
+    width: 12px;
+    height: 2px;
+    background: #bdc3c7;
+    border-radius: 1px;
+    animation: lineExpand 1.5s ease-in-out infinite alternate;
+}
+
+.line:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.line:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.line:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+/* Clock Icon */
+.clock {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.clock-face {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.hour-hand {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 2px;
+    height: 20%;
+    background: #ffffff;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 1px;
+    animation: hourHand 4s ease-in-out infinite;
+}
+
+.minute-hand {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 1px;
+    height: 30%;
+    background: #ffffff;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(90deg);
+    border-radius: 0.5px;
+    animation: minuteHand 2s linear infinite;
+}
+
+.center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Feature Text */
+.feature-title {
+    /* color: #9A7E5D; */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-family: poppins;
+    letter-spacing: 1px;
+}
+
+.feature-description {
+    color: #bdc3c7;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes expandUnderline {
+    to {
+        width: 80px;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes chartGrow {
+    0% {
+        transform: scaleY(0.7);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes dollarPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes lineExpand {
+    0% {
+        width: 8px;
+    }
+
+    100% {
+        width: 12px;
+    }
+}
+
+@keyframes hourHand {
+
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(135deg);
+    }
+}
+
+@keyframes minuteHand {
+    from {
+        transform: translateX(-50%) rotate(90deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(450deg);
+    }
+}
+
+@media(max-width:900px){
+    .why-choose-us-section{
+        padding: 1rem;
+    }
+}
+

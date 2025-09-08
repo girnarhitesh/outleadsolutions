@@ -1,0 +1,134 @@
+.contact-video-container{
+    text-align: center;
+    margin-top: -3vh;
+}
+.contact-video {
+  width: 40vw;
+  /* height: 1; */
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card Design */
+.contact-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 20px 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* 🔵 Animated shape background */
+.contact-card::before,
+.contact-card::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  z-index: 0;
+  animation: floatShape 6s infinite ease-in-out;
+}
+
+.contact-card::before {
+  width: 180px;
+  height: 180px;
+  background: #ff4d6d;
+  top: -60px;
+  left: -60px;
+}
+
+.contact-card::after {
+  width: 150px;
+  height: 150px;
+  background: #4d79ff;
+  bottom: -50px;
+  right: -50px;
+  animation-delay: 2s;
+}
+
+@keyframes floatShape {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(45deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ✅ Profile Video */
+.video-wrapper {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1;
+  position: relative;
+}
+
+.contact-video-profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.contact-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+  font-family: poppins;
+}
+
+.contact-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Button */
+.contact-btn {
+  background: linear-gradient(135deg, #ff4d6d, #ff7eb3);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #ff7eb3, #ff4d6d);
+  transform: scale(1.05);
+}
+
+@media(max-width:900px){
+  .contact-video{
+    width: 100%;
+    margin-top: 10vh;
+  }
+}

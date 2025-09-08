@@ -1,0 +1,150 @@
+.Aboutpage-contant-section p {
+    margin: 0 auto;
+    width: 50vw;
+    margin-top: -3vh;
+    margin-bottom: 3vh;
+    letter-spacing: 1px;
+
+}
+.About-section-button button {
+    border: 1px solid #958871;
+    background-color: #fff;
+    color: black;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+}
+
+/* Main flex container */
+.Aboutpage-contant-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /* padding: 50px 8%; */
+    flex-wrap: wrap;
+    /* responsive */
+}
+
+/* Left text section */
+.Aboutpage-section-contant-container {
+    flex: 1;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.Aboutpage-section-contant-container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 0.3px;
+}
+
+
+.Aboutpage-section-contant-container {
+    width: 100%;
+}
+
+.Aboutpage-section-contant-container p {
+    font-size: 1.1rem;
+    line-height: 25px;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+.Aboutpage-animation-img img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+
+}
+
+/* Keyframes for animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.Aboutpage-2container-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 0.3px;
+}
+.Aboutpage-secound-contnat p{
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 2vh;
+  width: 80vw;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .Aboutpage-contant-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Aboutpage-section-contant-container {
+        animation: fadeInUp 1s ease-out;
+    }
+
+    .Aboutpage-animation-img {
+        animation: fadeInUp 1s ease-out;
+    }
+    .Aboutpage-contant-section p{
+        width: 100%;
+    }
+    .About-section-button button{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+    }
+    .Aboutpage-section-contant-container h1{
+        margin-bottom: 1vh;
+    }
+    .Aboutpage-2container-section h1{
+        font-size: 2rem;
+    }
+    .Aboutpage-secound-contnat p{
+        width: 100%;
+    }
+
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:900px){
+    .Aboutpage-section-container{
+margin-top: 10vh;
+    }
+}

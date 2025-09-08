@@ -1,0 +1,82 @@
+.ServicesSlider-img-contant {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 30vh;
+    width: 100%;
+    line-break: anywhere;
+    /* max-width: 350px;  card ki max width */
+    margin: 0 auto;
+    /* center align */
+    overflow: hidden;
+}
+
+.Sevies-grid-template-section {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 4fr 4fr 4fr;
+}
+
+.ServicesSlider-img-contant img {
+    width: 40px;
+    height: auto;
+    margin: 0 auto 15px;
+    transition: transform 0.3s ease;
+}
+
+.ServicesSlider-img-contant h1 {
+    color: #111;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.ServicesSlider-img-contant p {
+    font-size: 12.4px;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+}
+
+/* Hover Effect */
+.ServicesSlider-img-contant:hover {
+    transform: translateY(-8px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 16px;
+}
+
+.ServicesSlider-img-contant:hover img {
+    transform: scale(1.1);
+}
+
+/* Swiper buttons hide */
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: none !important;
+
+}
+
+.swiper-horizontal {
+    overflow: visible;
+}
+
+@media(max-width:1219px) {
+    .ServicesSlider-img-contant {
+        height: 34vh;
+    }
+}
+
+@media(max-width:900px) {
+    .Sevies-grid-template-section {
+        display: flex;
+        flex-direction: column;
+    }
+}

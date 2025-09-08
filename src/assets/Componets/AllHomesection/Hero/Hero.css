@@ -1,0 +1,203 @@
+/* =============================
+   HERO SECTION MAIN CONTAINER
+============================= */
+.hero-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url("public/background.img/img.png") center/cover no-repeat, #2D2D2D;
+    color: black;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+
+/* =============================
+   PARTICLE CANVAS (subtle)
+============================= */
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.35;
+}
+
+/* =============================
+   CURSOR GLOW (lighter)
+============================= */
+.cursor-glow {
+    position: absolute;
+    width: 100px;
+    height: 00px;
+    background-image: radial-gradient(circle,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.05;
+    transition: all 0.25s ease-out;
+    z-index: 2;
+}
+
+/* =============================
+   CONTENT LAYER
+============================= */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =============================
+   HERO TITLE
+============================= */
+.hero-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* =============================
+   DESCRIPTION
+============================= */
+.hero-description-container {
+    position: relative;
+    min-height: 2rem;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-description-container p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+
+/* Text animation states */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeOutUp 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+        /* ऊपर जाएगा */
+    }
+}
+
+/* =============================
+   CTA BUTTONS
+============================= */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.70rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔵 Primary Button */
+.btn-primary {
+    background: #906D43;
+    color: white;
+}
+
+
+/* ⚪ Secondary Button */
+.btn-secondary {
+    background: transparent;
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 26px;
+        padding: 0 1rem;
+    }
+
+    .hero-description-container {
+        font-size: 14px;
+        padding: 0 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}

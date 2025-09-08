@@ -1,0 +1,38 @@
+.OurProcess-container-section {
+    text-align: center;
+}
+
+.Ourprocess-img-section img {
+    width: 80vh;
+}
+.Ourprocess-img-section{
+    width: 100%;
+}
+
+.Ourprocess-contant-container-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.Ourprocess-contant h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.Ourprocess-contant p{
+    font-size: 17px;
+    letter-spacing: 1px;
+    width: 37vw !important;
+}
+
+@media(max-width:900px){
+    .Ourprocess-contant-container-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .Ourprocess-img-section img{
+        width: 100%;
+    }
+}
