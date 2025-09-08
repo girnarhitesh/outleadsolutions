@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Services.css'
-import { Row,Col } from 'antd';
+import { Row, Col } from 'antd';
 
 const services = [
   {
