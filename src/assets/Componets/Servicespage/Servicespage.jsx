@@ -30,7 +30,7 @@ function Servicespage() {
 
                     <div>
                         <div className='Servicespage-img-section'>
-                            <img src="public/background.img/3893300.jpg" alt="" />
+                            <img src="/background.img/3893300.jpg" alt="" />
                         </div>
                     </div>
                 </div>
