@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: url("public/background.img/img.png") center/cover no-repeat, #2D2D2D;
+    background: url("/background.img/img.png") center/cover no-repeat, #2D2D2D;
     color: black;
     text-align: center;
     padding: 0 1rem;
